@@ -21,16 +21,38 @@ programa{
    }
 
    //mostra o vetor
-   escreva("\n Vetor")
+   escreva("\n Vetor :")
    para(inteiro i = 0; i < 4; i++){
    	escreva(" ", vetor[i])
    }
 
 
 
+  //multiplicar cada linha matriz pelo vetor
+  para(inteiro i = 0; i < 4 ; i++){
+  	para(inteiro c = 0; c < 4 ; c++){
+  		m[i][c] = m[i][c] * vetor[c]
+  	}
+  }
 
+  //mostrar matriz rsultante
+  escreva("\n matriz resultante:")
+   para(inteiro i = 0; i < 4; i++){
+   	para(inteiro c = 0; c < 4; c++){
+   		escreva("  ", m[i][c])
+   	}
+   	escreva("\n")
+   }
 
-
+   // somar diagonal principal
+   inteiro somaDiagonal = 0
+    para(inteiro i = 0; i < 4; i++){
+   	para(inteiro c = 0; c < 4; c++){
+         se( i == c ){
+         	somaDiagonal += m[i][c]
+         }
+   	}
+   	}
 		
 	}
 }
@@ -39,7 +61,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 515; 
+ * @POSICAO-CURSOR = 1083; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
